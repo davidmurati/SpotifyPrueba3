@@ -1,0 +1,235 @@
+.content {
+  position: relative ;
+  bottom: center;
+  left: center;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  
+  }
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+
+
+.boton{
+  
+  background-color: #4CAF50;
+color: white;
+padding: 10px;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+margin-top: 20px;
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+align-items: center;
+display: flex;
+justify-content: center;
+text-align: center;
+width: 200px;
+height: 20%;
+margin-bottom: 20px;
+  
+}
+
+.boton[type="submit"]:hover {
+  background-color: #0059b3;
+  align-items: center;
+}
+
+.boton1{
+  
+  background-color: #4CAF50;
+color: white;
+padding: 10px;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+margin-top: 20px;
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+align-items: center;
+display: flex;
+justify-content: center;
+text-align: center;
+width: 100%;
+  height: 20%;
+
+
+  
+}
+
+.boton1[type="submit"]:hover {
+  background-color: #0059b3;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+}
+
+
+
+.logo {
+  display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+height: 50vh;
+width: 100vw;
+background-color: #1db954;
+
+}
+
+img[type="logi"] {
+  
+height: 30vh;
+width: 30vw;
+background-color: #1db954;
+
+}
+
+.card {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+}
+
+.card p {
+  font-size: 1rem;
+}
+
+.card h2,
+.card p{
+  text-align: center;
+
+}
+
+.card img {
+  width: 200px;
+  max-width: 400px;
+}
+
+.container {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-evenly;
+  gap: 3rem;
+
+}
+
+.Barramenu ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  height: 5rem;
+  background-color: #33ff8be1;
+  align-items: center;
+  box-shadow: 0 2px 5px #000;
+  position: sticky;
+}
+
+.Barramenu ul > h2 {
+  margin-right: auto;
+}
+
+li {
+  list-style: none;
+  padding: 1.5rem 3.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  border-bottom: 1px solid #fff;
+}
+
+
+.title {
+  box-sizing: border-box;
+  width: 70%;
+  margin:auto;
+  position: relative;
+  
+  font-weight: 600;
+  letter-spacing: var(--ls);
+  overflow: hidden;
+  background: var(--bg);
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  }
+
+
+  .App-logo {
+    height: 70vh;
+    width: 100vw;
+    margin-right: 1rem;
+    flex: 1; /* Agrega esta línea para que el logo ocupe todo el ancho disponible */
+    display: block; /* Agrega esta línea para que la imagen sea un bloque */
+    margin: 0 auto; /* Agrega esta línea para centrar la imagen horizontalmente */
+  }
+
+  
+  .home-button {
+
+  
+
+    padding: 1rem;
+  font-size: 1.5rem;
+    border: 0;
+    perspective: 1800px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+    text-align: center;
+    transition: 0.4s;
+    font-size: clamp(1rem, 1.2em, 1.2em);
+    font-weight: bold;
+    
+  
+    }
+  
+    .home-button:hover {
+      cursor:pointer;
+      background-color: #33ff8c;
+      box-shadow: 0 0 5px #33ff8c, 0 0 20px #33ff8c
+    }
+
+    .title1 {
+      box-sizing: border-box;
+      width: 70%;
+      margin:auto;
+      position:relative;
+      
+      font-weight: 600;
+      letter-spacing: var(--ls);
+      overflow: hidden;
+      background: var(--bg);
+      margin: 0;
+      align-items: center;
+      justify-content: center;
+      }
+
+      .App-logo1 {
+        height: 10vh;
+        width: 5vw;
+        
+      }
