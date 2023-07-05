@@ -11,7 +11,7 @@ import axios from 'axios';
 const Principal = () => {
 
 const CLIENT_ID = "604059900c384dee93a2c1f39bd1c749"
-const REDIRECT_URI = "http://localhost:5173/principal"
+const REDIRECT_URI = "https://spotify-prueba3.vercel.app/Principal"
 const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize"
 const RESPONSE_TYPE = "token"
 
@@ -20,6 +20,7 @@ const RESPONSE_TYPE = "token"
 
 const [token, setToken] = useState("")
 const [searchKey, setSearchKey] = useState("")
+const [artists, setArtists] = useState([])
 
 const [description, setDescription] = useState('');
 const [publico, setPublico] = useState('');
@@ -45,15 +46,24 @@ useEffect(() => {
     setToken(token)
 }, [])
 
-const logout = () => {
-    setToken("/")
-    window.localStorage.removeItem("token")
-    window.location.href = '/';
+
+
+const searchArtists = async (e) => {
+  e.preventDefault()
+  const {data} = await axios.get("https://api.spotify.com/v1/search", {
+      headers: {
+          Authorization: `Bearer ${token}`
+      },
+      params: {
+          q: searchKey,
+          type: "artist"
+      }
+  })
+
+  setArtists(data.artists.items)
 }
 
-const EntrarSpotify = () => {
-    window.location.href = 'https://open.spotify.com/'
-}
+
 
 
 
@@ -171,12 +181,27 @@ const PostGoogleSheet = () => {
         <div class="content">
 
         <h2>Revisa nuestra colección  de podcast entrando a Spotify</h2>
+       
 
-        
+        {token ?
+                    <form onSubmit={searchArtists}>
 
-        <button type="submit" class="boton" onClick={handleSpotifyClick}>Entrar a Spotify</button>
+                    </form>
 
-        
+                    : <h2></h2>
+
+                }
+
+        {!token ?
+                     <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}>Abrir cuenta de Spotify</a>
+
+
+                    : <button type="submit" class="boton" onClick={handleSpotifyClick}>Entrar a Spotify</button> 
+
+                    
+                    
+                }
+
         <button type="submit" class="boton" onClick={handleSalirClick}>Salir</button>
 
         
